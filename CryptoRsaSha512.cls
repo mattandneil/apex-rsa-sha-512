@@ -1502,6 +1502,7 @@ public class CryptoRsaSha512
          */
         public Blob generateDigest()
         {
+            // credit @xoob - fast byte conversion: https://github.com/pdalcol/Zippex/pull/20#issue-80685063
             List<Integer> bytes = EncodingUtil.convertToHex(this.input).replaceAll('..', '\\\\u00$0').getChars();
             
             // First pad the input to the correct length, adding the bits specified in the SHA algorithm
