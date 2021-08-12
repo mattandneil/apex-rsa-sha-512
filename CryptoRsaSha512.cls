@@ -1396,7 +1396,8 @@ public class CryptoRsaSha512
         public Blob signSha512(Blob message) //function(sHashHex, hashAlg) {
         {
             Blob messageDigest = new SHA512(message).generateDigest();
-            return this.doPrivate(messageDigest);
+            Blob messageDigestWithInfo = messageDigestWithInfo(messageDigest);
+            return this.doPrivate(messageDigestWithInfo);
         }
         
         /**
@@ -1432,6 +1433,34 @@ public class CryptoRsaSha512
             return m.toBlob();
         }
         
+        /**
+         * DigestInfo heading hexadecimal bytes for SHA-512
+         */
+        final String sha512DigestInfo = '3051300d060960864801650304020305000440';
+    
+        /**
+         * Build PKCS#1 padded hexadecimal DigestInfo
+         */
+        @TestVisible Blob messageDigestWithInfo(Blob messageDigest)
+        {
+            Integer keySize = this.N.bitLength();
+            Integer minLength = keySize / 4; // minimum PM length
+            String messageDigestWithInfo = sha512DigestInfo + EncodingUtil.convertToHex(messageDigest);
+    
+            // len(0001+ff(*8)+00+hDigestInfo)=22
+            if (messageDigestWithInfo.length() + 22 > minLength)
+            {
+                throw new StringException('Key is too short for RSA-SHA512');
+            }
+            
+            String head = '0001', mid = '', tail = '00' + messageDigestWithInfo;
+            Integer length = minLength - head.length() - tail.length();
+            for (Integer i = 0; i < length; i += 2) mid += 'ff';
+            
+            String paddedMessageDigestWithInfo = head + mid + tail;
+            return EncodingUtil.convertFromHex(paddedMessageDigestWithInfo);
+        }
+    
     }
 
 
