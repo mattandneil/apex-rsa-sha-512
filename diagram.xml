@@ -1,0 +1,88 @@
+<diagram><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>540</x><y>269</y><w>80</w><h>40</h></coordinates><panel_attributes>bg=yellow
+valign=center
+
+
+  message
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>259</y><w>70</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes>50;10;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>359</y><w>80</w><h>40</h></coordinates><panel_attributes>bg=#cccccc
+valign=center
+type=actclass
+SHA512
+hasher</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>299</y><w>120</w><h>80</h></coordinates><panel_attributes>JSON Web Token
+header . payload
+
+lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>479</y><w>80</w><h>40</h></coordinates><panel_attributes>bg=#cccccc
+valign=center
+type=actclass
+RSA
+signer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>359</y><w>80</w><h>40</h></coordinates><panel_attributes>bg=#cccccc
+valign=center
+type=actclass
+ASN key
+reader</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>479</y><w>80</w><h>40</h></coordinates><panel_attributes>valign=center
+type=actclass
+Big Integer
+math class</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>360</x><y>269</y><w>80</w><h>40</h></coordinates><panel_attributes>bg=yellow
+halign=center
+valign=center
+private
+key file</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>299</y><w>50</w><h>80</h></coordinates><panel_attributes>Blob
+
+lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>379</y><w>170</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-
+r1=version = V\nmodulus = N\npublic exponent = E\nprivate exponent = D\nprime1 = P\nprime2 = Q\nmod(p-1) = Dp\nmod(q-1) = Dq\ncoefficient = Qi 
+</panel_attributes><additional_attributes>150;120;10;120;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>389</y><w>50</w><h>110</h></coordinates><panel_attributes>hash
+lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>479</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=..
+powMod()</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>509</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>599</y><w>60</w><h>20</h></coordinates><panel_attributes>transparency=0
+bg=green
+valign=center
+signature</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>259</y><w>70</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;50;30</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>350</x><y>260</y><w>20</w><h>20</h></coordinates><panel_attributes>bg=black
+fg=white
+transparency=0
+valign=bottom
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>350</x><y>350</y><w>20</w><h>20</h></coordinates><panel_attributes>bg=black
+fg=white
+transparency=0
+valign=bottom
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>530</x><y>260</y><w>20</w><h>20</h></coordinates><panel_attributes>bg=black
+fg=white
+transparency=0
+valign=bottom
+fontsize=12
+layer=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>530</x><y>350</y><w>20</w><h>20</h></coordinates><panel_attributes>bg=black
+fg=white
+transparency=0
+valign=bottom
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>530</x><y>470</y><w>20</w><h>20</h></coordinates><panel_attributes>bg=black
+fg=white
+transparency=0
+valign=bottom
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>259</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+1
+fontsize=14
+fg=white
+lw=0
+layer=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>349</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+2
+fontsize=14
+fg=white
+lw=0
+layer=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>259</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+3
+fontsize=14
+fg=white
+lw=0
+layer=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>319</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+2
+fontsize=14
+fg=white
+lw=0
+layer=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>349</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+4
+fontsize=14
+fg=white
+lw=0
+layer=10</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>469</y><w>20</w><h>20</h></coordinates><panel_attributes>valign=center
+5
+fontsize=14
+fg=white
+lw=0
+layer=10</panel_attributes><additional_attributes></additional_attributes></element></diagram>
