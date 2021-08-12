@@ -27,6 +27,6 @@
         Blob actual = CryptoRsaSha512.sign(message, pemFile);
         
         // assert
-        System.assertEquals('8493cf2b7f3e16e6a143dd6f5bcacc5cbadef0ac8c5e02a2e9f6b8ce67538b02d2d2e2cc1dfd285be750375fabbd742ccde527ba6bd0247eef64e0b189497b30df381a1976c2c0267a2ba521ba32994f180f251f55193b290c2dc3f8d3c26a736853ce1fc3eecb3cdbeacce5b77f5e108fbde81a7b476f89bf0ec395ebdd2ebf', EncodingUtil.convertToHex(actual));
+        System.assertEquals('195657c3d157fe851370ebc6a6c8034cba9d2d01a2406c3b733e8caf76914d828fc1e3cee1a2ded9adbf39bf830a6b48ad51db7a6ad4d32fc372b4642b6e0241480f9b67f540946c4a910559ce24af0687886acd54e890c865f98b89f92db9ebd3248d135dba69fedcf73ff9557cb099f5302fc601a020dc904570ae63dce4e5', EncodingUtil.convertToHex(actual));
     }
 }
